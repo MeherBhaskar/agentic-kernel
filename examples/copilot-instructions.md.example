@@ -1,0 +1,36 @@
+# Example: Copilot Instructions (GitHub Copilot)
+
+# Place this content in `.github/copilot-instructions.md` in your project root.
+
+## Development Framework
+
+This project uses structured development protocols defined in `.agents/SYSTEM_CORE.md`.
+
+## Required Workflow
+
+1. **Before implementation:** Read `PLAN.md` for current task status. If no plan exists, create one using the template in `.agents/templates/PLAN_TEMPLATE.md`
+2. **During implementation:** Follow test-first development. Write a failing test, then implement, then verify
+3. **Before committing:** Review changes across correctness, readability, architecture, security, and performance
+4. **After completing tasks:** Update `PLAN.md` status markers and append to `progress_log.md`
+
+## Constraints
+
+- Atomic commits only: one logical change per commit
+- Format: `<type>(<scope>): TASK-XXX <description>`
+- Never modify files outside the current task's scope
+- Revert (`git reset --hard HEAD`) if an approach fails 3 times
+- Read files before editing them
+- Keep functions under 40 lines and files under 300 lines
+
+## Project Details
+
+- Language: [your language]
+- Test runner: [command]
+- Linter: [command]
+
+## Key Files
+
+- `PLAN.md` — Active task plan with status tracking
+- `progress_log.md` — Append-only log of decisions and reviews
+- `.docs/architecture/` — System documentation
+- `.agents/SYSTEM_CORE.md` — Full operating protocol reference

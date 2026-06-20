@@ -1,0 +1,52 @@
+# Example: CLAUDE.md (Claude Code)
+
+# Place this file at `CLAUDE.md` in your project root.
+
+## Operating System
+
+This project uses the Agentic Kernel framework for structured development.
+Read `.agents/SYSTEM_CORE.md` before starting any task.
+
+## Mandatory Workflow
+
+For every task:
+1. **Plan first** — Create or update `PLAN.md` using `.agents/skills/01_mission_synthesis/02_strategic_decomposition.md`
+2. **Test first** — Write failing tests before implementation per `.agents/skills/02_execution_engine/05_incremental_proof_cycles.md`
+3. **Commit atomically** — One task = one commit per `.agents/skills/02_execution_engine/04_state_checkpoint_protocol.md`
+4. **Review before finalizing** — Run the 5-axis audit per `.agents/skills/03_verification_matrix/06_pentagonal_audit.md`
+5. **Update docs** — Keep `.docs/architecture/` current per `.agents/skills/04_cognitive_persistence/08_structural_cartography.md`
+
+## Hard Rules
+
+- NEVER commit failing tests
+- NEVER modify files outside your scope declaration
+- NEVER attempt the same failing approach more than 3 times — revert and rethink
+- ALWAYS read a file before modifying it
+- ALWAYS capture both stdout and stderr from commands
+- ALWAYS use `git reset --hard HEAD && git clean -fd` when reverting, not partial reverts
+
+## Project Context
+
+- Language: [your language]
+- Test command: `[your test command]`
+- Lint command: `[your lint command]`
+- Build command: `[your build command]`
+
+## Commit Message Format
+
+```
+<type>(<scope>): TASK-XXX <description>
+```
+
+Types: feat, fix, refactor, test, docs, chore
+
+## File Layout
+
+```
+PLAN.md              — Active task plan
+progress_log.md      — Append-only decision log
+.docs/architecture/  — System maps and module cards
+.docs/context/       — Session snapshots for resumption
+.docs/decisions/     — Architecture Decision Records
+.docs/learned_rules/ — Reusable patterns from past work
+```

@@ -1,0 +1,50 @@
+# Example: .cursorrules (Cursor IDE)
+
+# Place this content in `.cursor/rules/kernel.mdc` in your project root.
+# Or in `.cursorrules` for older Cursor versions.
+
+---
+description: Core operating protocols for autonomous development
+alwaysApply: true
+---
+
+# Agentic Kernel — Cursor Integration
+
+## Primary Directive
+Read and follow `.agents/SYSTEM_CORE.md` for all development tasks. Every task must flow through the phase system.
+
+## Workflow Rules
+
+### Planning (Before Writing Code)
+- Create a `PLAN.md` with atomic tasks before any implementation
+- Each task must have acceptance criteria and dependency ordering
+- Mark the first task `[IN PROGRESS]` before coding
+
+### Implementation (While Writing Code)
+- Write failing tests FIRST, then implement
+- Write ≤50 lines of code between test runs
+- If the same approach fails 3 times: STOP, `git reset --hard HEAD && git clean -fd`, and rethink
+- Only modify files listed in your scope declaration
+
+### Commits (Before Committing)
+- Run the full test suite
+- Review your diff across 5 axes: Correctness, Readability, Architecture, Security, Performance
+- One task = one commit. Format: `<type>(<scope>): TASK-XXX <description>`
+
+### Memory (After Milestones)
+- Update `.docs/architecture/` after structural changes
+- Write context snapshots at session boundaries
+- Log learnings from failures in `.docs/learned_rules/`
+
+## Hard Constraints
+- Never commit failing tests
+- Never modify out-of-scope files
+- Never batch multiple tasks into one commit
+- Never remove code you can't explain (Preserved Intent)
+- Always read files before modifying them
+- Always use absolute paths when there's ambiguity
+
+## Project Specifics
+- Language: [your language]
+- Test command: `[your test command]`
+- Lint command: `[your lint command]`

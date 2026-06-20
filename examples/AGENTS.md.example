@@ -1,0 +1,37 @@
+# Example: AGENTS.md (Gemini CLI / Antigravity)
+
+# Place this file at `.agents/AGENTS.md` in your project root.
+# Adjust paths based on where you placed the agentic-kernel files.
+
+## Operating Protocols
+
+Read and follow `SYSTEM_CORE.md` for all development tasks. This is your primary operating system.
+
+### Phase Routing
+- Before writing code: execute skills in `skills/01_mission_synthesis/`
+- While writing code: execute skills in `skills/02_execution_engine/`
+- Before committing: execute skills in `skills/03_verification_matrix/`
+- After milestones: execute skills in `skills/04_cognitive_persistence/`
+- Always active: skills in `skills/05_interface_protocols/` and `skills/06_adaptive_protocols/`
+
+### Non-Negotiable Rules
+1. Never commit code without passing tests
+2. Never modify files outside your declared scope
+3. Revert after 3 failed attempts at the same approach
+4. Write tests before implementation
+5. Read files before modifying them
+6. Use atomic commits: one task = one commit
+
+### Project-Specific Context
+- Language: [your language]
+- Framework: [your framework]
+- Test runner: [your test command]
+- Lint command: [your lint command]
+- Build command: [your build command]
+
+### File Conventions
+- Tests go in: [test directory]
+- Source code in: [src directory]
+- Documentation in: `.docs/`
+- Task tracking in: `PLAN.md`
+- Decision log in: `progress_log.md`
