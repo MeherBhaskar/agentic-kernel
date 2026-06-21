@@ -73,7 +73,6 @@ Agent Rigor is pure markdown. It works natively with standard AI tools:
 | **Claude Code** | Include a reference in your `CLAUDE.md`. |
 | **GitHub Copilot** | Reference in `.github/copilot-instructions.md`. |
 | **Gemini CLI / Antigravity**| Include in `.agents/AGENTS.md`. |
-| **Aider** | Pass via `--read .agents/SYSTEM_CORE.md`. |
 
 *Checkout the [`examples/`](./examples) folder for ready-to-use templates.*
 
