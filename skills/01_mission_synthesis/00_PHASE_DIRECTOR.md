@@ -12,6 +12,7 @@ When entering Phase 1, you MUST execute the following sequence:
    - Read the raw user request or issue ticket.
    - If the request is a simple bug fix, execute `01_requirement_distillation.md` focusing on reproduction steps.
    - If the request is a feature/epic, execute `01_requirement_distillation.md` focusing on edge cases and scope boundaries.
+   - If the request requires clarification or asks to be "grilled", execute `03_interrogation_protocol.md` to conduct a rigorous interactive interview before distillation.
 
 2. **Decompose & Plan**
    - Once a specification is complete, execute `02_strategic_decomposition.md`.

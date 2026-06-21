@@ -19,5 +19,9 @@ Whenever you interact with the environment, route your approach through these sk
    - Enforce truncation, atomic writes, and the read-before-write rule.
    - Apply the destructive command safeguards before any state-altering shell operation.
 
-3. **Phase Exit Gate**
+3. **Human Collaboration & Blockers**
+   - Execute `13_user_escalation.md`.
+   - Safely halt execution and present structured options when hitting critical blockers or unresolvable ambiguities mid-execution.
+
+4. **Phase Exit Gate**
    - These are constant operational constraints. They apply immediately and universally across all other phases.
