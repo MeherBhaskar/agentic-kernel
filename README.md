@@ -109,23 +109,7 @@ Agent Rigor includes a library of 18 specialized Agent Skills. The **Apex Kernel
 
 ---
 
-## The Hard Data: RigorBench Validated
-
-We evaluated Agent Rigor using the RigorBench methodology to measure its impact on process and outcomes.
-
-In an evaluation across 30 complex software engineering tasks, Agent Rigor demonstrated meaningful improvements compared to Baseline ReAct, Superpowers, and Agent-Skills.
-
-<div align="center">
-
-| Metric | Baseline | Agent Rigor | Improvement |
-| :--- | :---: | :---: | :---: |
-| **Overall Process Score** | 0.48 | **0.61** | **<span style="color:green">+27%</span>** |
-| **Outcome Quality (Success Rate)** | 0.64 | **0.83** | **<span style="color:green">+30%</span>** |
-
-</div>
-
-### Category Performance
-Agents were evaluated across 5 disciplinary pillars. Agent Rigor showed positive results in each area:
+## Evaluation
 
 | Task Category | Baseline ReAct | Superpowers | Agent-Skills | **Agent-Rigor** |
 | :--- | :---: | :---: | :---: | :---: |
