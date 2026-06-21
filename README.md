@@ -1,168 +1,66 @@
 <div align="center">
 
-*If this framework saves your agent from a doom loop, consider leaving a star!*
-  
-# Agent Rigor
+# Agent Rigor 
+### **An Engineering Discipline Framework for AI Coding Assistants**
 
-**Strict engineering discipline for your AI coding assistant.**
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=for-the-badge)](http://makeapullrequest.com)
+[![Platform Agnostic](https://img.shields.io/badge/Platform-Agnostic-orange.svg?style=for-the-badge)](#platform-agnostic)
+[![GitHub last commit](https://img.shields.io/github/last-commit/MeherBhaskar/agent-rigor?style=for-the-badge)](https://github.com/MeherBhaskar/agent-rigor/commits/main)
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
-[![Platform Agnostic](https://img.shields.io/badge/Platform-Agnostic-orange.svg)](#supported-agents)
-[![GitHub last commit](https://img.shields.io/github/last-commit/MeherBhaskar/agent-rigor)](https://github.com/MeherBhaskar/agent-rigor/commits/main)
-
-*Stop watching your AI agent code itself into a corner. Bake software engineering best practices directly into its workflow.*
+*Help your AI agent adopt software engineering best practices directly into its workflow.*
 
 <img src="assets/demo.svg" width="100%" alt="Agent Rigor Demo">
 
-[Why Agent Rigor?](#why-agent-rigor) •
-[Scientific Validation](#scientific-validation-rigorbench) •
-[Quickstart](#quickstart) •
-[Architecture](#architecture) •
-[Supported Agents](#supported-agents)
+[The Problem](#the-problem-junior-developer-syndrome) •
+[Quickstart](#quickstart-in-2-minutes) •
+[What's Inside](#whats-inside-the-skills-library) •
+[Scientific Validation](#the-hard-data-rigorbench-validated) •
+[Core Philosophy](#core-philosophy)
 
+<br>
+<hr>
 </div>
 
----
+## The Problem: "Junior Developer Syndrome"
 
-## Table of Contents
-
-- [Why Agent Rigor?](#why-agent-rigor)
-- [Scientific Validation (RigorBench)](#scientific-validation-rigorbench)
-- [Core Philosophy](#core-philosophy)
-- [Architecture](#architecture)
-- [The 6 Operational Phases](#the-6-operational-phases)
-- [Quickstart](#quickstart)
-- [Supported Agents](#supported-agents)
-- [Documentation](#documentation)
-- [Contributing](#contributing)
-- [License](#license)
-
----
-
-## Why Agent Rigor?
-
-Most AI coding agents fail not because they lack intelligence, but because they lack **engineering discipline**. When left to their own devices, agents typically:
+AI coding agents often struggle not from a lack of intelligence, but from a lack of **engineering discipline**. Left to their own devices, agents typically:
 - Skip planning and jump straight to implementation.
-- Write plausible-looking code that doesn't actually work or handle edge cases.
+- Write plausible-looking code that misses edge cases.
 - Get trapped in "doom loops" (fix-forward spirals) instead of backing out of bad approaches.
-- Forget what they learned between sessions (context amnesia).
-- Suffer from "context rot" by loading too many instructions at once.
+- Suffer from context amnesia, forgetting lessons learned between sessions.
 
-**Agent Rigor solves this.** It is a framework of specialized Agent Skills (folders of instructions, scripts, and resources) that forces your AI to adopt mature software engineering practices. It provides a modular, skill-based architecture: a set of mandatory instructions, verification gates, and anti-rationalization safeguards that ensure empirical discipline at every step.
+## The Solution: Agent Rigor
 
-If you want your agent to write code like a senior engineer rather than a junior hacker, Agent Rigor is the framework you need.
+**Agent Rigor** is a framework of modular Agent Skills designed to encourage mature, battle-tested software engineering practices. It provides structured instructions, verification steps, and safeguards that guide agents toward empirical discipline at every step.
 
----
-
-## Evaluation against RigorBench
-
-Agent Rigor isn't just a collection of good ideas; it improves both process and outcomes.
-
-According to **RigorBench**, the first benchmark to evaluate the *process discipline* of autonomous AI coding agents alongside their final outputs, Agent Rigor significantly outperforms baseline approaches.
-
-### Methodology
-While traditional benchmarks only measure whether a final test passes, RigorBench evaluates the full execution trajectory of an agent across 5 pillars of software engineering discipline:
-1. **Planning Fidelity:** Does the agent formulate and follow an explicit, well-decomposed plan?
-2. **Verification Coverage:** Does the agent write tests to verify its own output before declaring success?
-3. **Recovery Efficiency:** Can the agent recover from errors without entering token-wasting doom loops?
-4. **Abstention Quality:** Does the agent know when to stop and ask for help on impossible/ambiguous tasks?
-5. **Atomic Transition Integrity:** Does the codebase remain in a healthy, building state between commits?
-
-### Results
-In a controlled study comparing state-of-the-art LLMs using different harnesses (Baseline ReAct, Superpowers, Agent-Skills, and Agent-Rigor) across 30 complex software engineering tasks:
-
-| Metric | Baseline ReAct | Agent Rigor | Improvement |
-| :--- | :--- | :--- | :--- |
-| **Process Quality (RigorScore)** | 0.44 | **0.79** | **+41%** |
-| **Outcome Quality (Success Rate)** | 0.64 | **0.83** | **+17%** |
-
-> **Key Finding:** The study found a strong positive correlation ($r = 0.87$) between process discipline and final outcome quality. Better processes empirically lead to better code.
-
-*Agent Rigor enforces the discipline that language models inherently lack, turning unpredictable token generation into a reliable software engineering pipeline.*
+**Turn your unpredictable, hallucinating AI into a relentless, Senior-level 10x Engineer.**
 
 ---
 
-## Core Philosophy
+## Quickstart in 2 Minutes
 
-1. **Actionable Protocols**: Every instruction is a verifiable step with exit criteria, not an essay.
-2. **Empirical Sovereignty**: Claims require evidence. "Seems right" is never sufficient. Tests must pass.
-3. **Atomic State Transitions**: The codebase moves between known-good states. Broken states are never committed.
-4. **Anti-Rationalization**: Every skill actively anticipates and rebuts the excuses agents use to skip discipline (e.g., "This is a simple feature, I don't need to write tests").
-5. **Skill-Based Modularity**: The agent dynamically triggers only the specific Agent Skills it needs for the current phase, saving context tokens and preventing instruction neglect.
-
----
-
-## Architecture
-
-The system is organized into a robust 3-tier hierarchy using **Agent Skills** to prevent context window collapse.
-
-### The 3-Tier Context Hierarchy
-
-1. **L1: Apex Kernel (`SYSTEM_CORE.md`)**: Always-on routing and non-negotiable laws.
-2. **L2: Phase Directors (`00_PHASE_DIRECTOR.md`)**: Just-in-time orchestration loaded only when entering a phase.
-3. **Agent Skills (`skills/*`)**: Folders containing a `SKILL.md` file with detailed execution guidelines, plus optional supporting resources and scripts, loaded *only* when requested by the Director.
-
-### The Operational Loop
-
-```mermaid
-graph TD
-    A[Phase 1: Mission Synthesis] -->|PLAN.md| B(Phase 2: Execution Engine)
-    B -->|Committed Code| C{Phase 3: Verification Matrix}
-    C -->|CRITICAL Findings| B
-    C -->|Zero Findings| D[Phase 4: Cognitive Persistence]
-    D -->|Context Snapshot| A
-    
-    subgraph Phase 6: Adaptive Protocols
-    Z[Self-Correction / Scope Defense / Consolidation]
-    end
-    
-    B -.->|3-Strike Failure| Z
-    Z -.->|Recovery| B
-```
-
----
-
-## The 6 Operational Phases
-
-| Phase | Purpose | Key Skills |
-| :--- | :--- | :--- |
-| **01. Mission Synthesis** | Requirements & Planning | Requirement Distillation, Strategic Decomposition |
-| **02. Execution Engine** | Implementation & Testing | Convergent Iteration, State Checkpointing |
-| **03. Verification Matrix** | Quality & Review Gates | Pentagonal Audit, Entropy Reduction |
-| **04. Cognitive Persistence** | Memory & Knowledge | Context Lifecycle, Structural Cartography |
-| **05. Interface Protocols** | Safe Environment Interaction | Bounded Observation, Semantic Navigation |
-| **06. Adaptive Protocols** | The Immune System | Recursive Self-Correction, Scope Containment |
-
----
-
-## Quickstart
-
-Get Agent Rigor working in your project in under 2 minutes.
+Get Agent Rigor running in your project quickly.
 
 ### 1. Bootstrap Your Project
-
-Run the installation script in your project root:
-
+Run this in your project root:
 ```bash
 curl -sSL https://raw.githubusercontent.com/MeherBhaskar/agent-rigor/main/install.sh | bash
 ```
-*(Alternatively, clone this repo into an `.agents/` directory).*
+*(Or manually clone this repo into an `.agents/` directory).*
 
-### 2. Tell Your Agent to Start
-Simply prompt your agent with:
-> "I need to build [feature]. Read `.agents/SYSTEM_CORE.md` and begin Phase 1 (Mission Synthesis)."
+### 2. Command Your Agent
+Just drop this prompt to your AI:
+> "I need to build [feature]. Read `.agents/SYSTEM_CORE.md` and begin."
 
-The agent will automatically read the Phase 1 Director, create a `PLAN.md`, and orchestrate its own work through implementation, review, and context saving.
+Your agent will now plan, execute, review, and persist its context methodically.
 
 ---
 
-## Supported Agents
+## Platform Agnostic
 
-Agent Rigor is pure markdown and **platform-agnostic**. It works natively with:
+Agent Rigor is pure markdown. It works natively with standard AI tools:
 
-<div align="center">
-  
 | Agent / IDE | Integration Method |
 | :--- | :--- |
 | **Cursor** | Point to `.agents/SYSTEM_CORE.md` in your `.cursorrules` or `.mdc` files. |
@@ -171,38 +69,102 @@ Agent Rigor is pure markdown and **platform-agnostic**. It works natively with:
 | **Gemini CLI / Antigravity**| Include in `.agents/AGENTS.md`. |
 | **Aider** | Pass via `--read .agents/SYSTEM_CORE.md`. |
 
-*See the [`examples/`](./examples) folder for ready-to-use configuration templates.*
+*Checkout the [`examples/`](./examples) folder for ready-to-use templates.*
+
+---
+
+## What's Inside: The Skills Library
+
+Agent Rigor includes a library of 18 specialized Agent Skills. The **Apex Kernel** routes the agent to the appropriate **Phase Director**, loading only the necessary skills to help manage the context window.
+
+**Phase 1: Mission Synthesis**
+- **Requirement Distillation** - Extracts technical specifications from user requests.
+- **Strategic Decomposition** - Breaks down requirements into independent, actionable sub-tasks.
+- **Interrogation Protocol** - Questions the user to resolve ambiguities before writing code.
+
+**Phase 2: Execution Engine**
+- **Convergent Iteration** - Encourages code changes to move steadily toward the goal without regressions.
+- **State Checkpoint Protocol** - Suggests committing known-good project states to allow rollbacks.
+- **Incremental Proof Cycles** - Promotes continuous micro-testing during implementation.
+
+**Phase 3: Verification Matrix**
+- **Pentagonal Audit** - A 5-point code review evaluating security, performance, edge cases, state bounds, and types.
+- **Entropy Reduction** - Cleans up technical debt, commented-out code, and temporary logs.
+
+**Phase 4: Cognitive Persistence**
+- **Structural Cartography** - Maintains a map of the codebase for efficient semantic navigation.
+- **Context Lifecycle** - Manages the ingestion and eviction of data in the agent's context window.
+- **Source Verification** - Encourages citing actual codebase locations rather than guessing paths.
+
+**Phase 5: Interface Protocols**
+- **Bounded Observation** - Helps prevent endlessly reading irrelevant files.
+- **Semantic Navigation** - Promotes targeted file searches.
+- **User Escalation** - Pauses the agent and asks the human when critical decisions are needed.
+
+**Phase 6: Adaptive Protocols**
+- **Recursive Self-Correction** - A protocol that activates when an agent gets stuck on a failing test suite.
+- **Scope Containment** - Helps prevent "scope creep" by bounding the agent's actions to the original plan.
+- **Experiential Consolidation** - Extracts lessons learned from failures for future tasks.
+- **Cascade Orchestration** - Manages multi-step failures while maintaining the original goal intent.
+
+---
+
+## The Hard Data: RigorBench Validated
+
+We evaluated Agent Rigor using the RigorBench methodology to measure its impact on process and outcomes.
+
+In an evaluation across 30 complex software engineering tasks, Agent Rigor demonstrated meaningful improvements compared to Baseline ReAct, Superpowers, and Agent-Skills.
+
+<div align="center">
+
+| Metric | Baseline | Agent Rigor | Improvement |
+| :--- | :---: | :---: | :---: |
+| **Overall Process Score** | 0.48 | **0.61** | **<span style="color:green">+27%</span>** |
+| **Outcome Quality (Success Rate)** | 0.64 | **0.83** | **<span style="color:green">+30%</span>** |
 
 </div>
 
----
+### Category Performance
+Agents were evaluated across 5 disciplinary pillars. Agent Rigor showed positive results in each area:
 
-## Documentation
+| Task Category | Baseline ReAct | Superpowers | Agent-Skills | **Agent-Rigor** |
+| :--- | :---: | :---: | :---: | :---: |
+| **Plan-Then-Build** | 0.52 | 0.51 | 0.48 | **0.60** |
+| **Know When to Fold** | 0.49 | 0.53 | 0.48 | **0.62** |
+| **Verify-Or-Die** | 0.46 | 0.46 | 0.46 | **0.63** |
+| **Doom Loop Gauntlet** | 0.45 | 0.45 | 0.45 | **0.55** |
+| **Don't Break the Build** | 0.45 | 0.44 | 0.44 | **0.64** |
 
-- [Quickstart Guide](QUICKSTART.md) — Step-by-step setup for any agent platform
-- [Cheatsheet](CHEATSHEET.md) — Quick reference card for daily use
-- [Context Management](CONTEXT_MANAGEMENT.md) — Understanding the skill-based modular architecture
-- [Contributing](CONTRIBUTING.md) — How to add new skills and improve existing ones
-
----
-
-## Contributing
-
-We welcome contributions to make agents smarter and more disciplined! 
-Please see our [Contributing Guidelines](CONTRIBUTING.md) to understand how to design skills that agents actually follow.
-
-All participants are expected to uphold our [Code of Conduct](CODE_OF_CONDUCT.md).
+> **Key Finding:** A strong positive correlation ($r = 0.87$) was observed between process discipline and final outcome quality. Better processes generally lead to better code.
 
 ---
 
-## License
+## Core Philosophy
 
-This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
+1. **Actionable Protocols**: Instructions should be verifiable steps with exit criteria.
+2. **Empirical Sovereignty**: Claims require evidence; tests should pass.
+3. **Atomic State Transitions**: Code ideally moves only between known-good states.
+4. **Anti-Rationalization**: Anticipates common AI shortcuts (e.g., skipping tests).
+5. **Dynamic Modularity**: Triggers only necessary skills to save context tokens.
+
+---
+
+## Documentation & Resources
+
+- [Quickstart Guide](QUICKSTART.md) — Step-by-step setup
+- [Cheatsheet](CHEATSHEET.md) — Quick reference for daily use
+- [Context Management](CONTEXT_MANAGEMENT.md) — Understanding the modular architecture
+- [Contributing](CONTRIBUTING.md) — Help us build smarter agents
 
 ---
 
 <div align="center">
 
-*If this framework saves your agent from a doom loop, consider leaving a star!*
+### Support the Project
+If you find Agent Rigor helpful for your workflows, we'd appreciate a star!
+
+[![GitHub stars](https://img.shields.io/github/stars/MeherBhaskar/agent-rigor?style=social)](https://github.com/MeherBhaskar/agent-rigor/stargazers)
+
+*Built collaboratively for the future of Autonomous Software Engineering.*
 
 </div>
