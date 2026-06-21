@@ -15,27 +15,27 @@ To prevent this, Agent Rigor uses **Skill-Based Architecture** — an architectu
 ## The 3-Layer Context Architecture
 
 ### Layer 1: The Apex Kernel (Always-On)
-**File:** `SYSTEM_CORE.md`
-**When to load:** Always. This should be injected via system prompt, `.cursorrules`, or `CLAUDE.md`.
+**File:** `SYSTEM_CORE.md`  
+**When to load:** Always. This should be injected via system prompt, `.cursorrules`, or `CLAUDE.md`.  
 **Purpose:** Defines the non-negotiable laws and the overarching Phase Router. It tells the agent *where* to go, but not the deep details of *how* to execute the skills. It must remain under 150 lines.
 
 ### Layer 2: Phase Directors (Just-in-Time Routing)
-**Files:** `skills/**/00_PHASE_DIRECTOR.md`
-**When to load:** Only when the agent enters that specific phase.
-**Purpose:** Once the Apex Kernel routes an agent to Phase 2, the agent reads the Phase 2 Director. This director acts as the local orchestrator, explaining which L3 skills to use and the exit criteria for the phase.
+**Files:** `skills/**/00_PHASE_DIRECTOR.md`  
+**When to load:** Only when the agent enters that specific phase.  
+**Purpose:** Once the Apex Kernel routes an agent to Phase 2, the agent reads the Phase 2 Director. This director acts as the local orchestrator, explaining which L3 skills to use and the exit criteria for the phase.  
 *Rule: When moving from Phase 2 to Phase 3, the agent should ideally drop the Phase 2 Director from its active context to save tokens.*
 
 ### Layer 3: Execution Skills (Task-Specific)
-**Files:** `skills/**/[01-16]_*.md`
-**When to load:** ONLY when the Phase Director explicitly instructs the agent to execute that skill.
-**Purpose:** The deep, detailed operational protocols, anti-rationalization tables, and evidence requirements. 
+**Files:** `skills/**/[01-16]_*.md`  
+**When to load:** ONLY when the Phase Director explicitly instructs the agent to execute that skill.  
+**Purpose:** The deep, detailed operational protocols, anti-rationalization tables, and evidence requirements.   
 *Rule: Once a skill is completed (e.g., PLAN.md is written), the agent drops `02_strategic_decomposition.md` from its active thought process.*
 
 ---
 
 ## Implementation by Platform
 
-### For General LLMs & CLI Agents (Aider, Claude Code, Antigravity)
+### For General LLMs & CLI Agents (Claude Code, Antigravity)
 
 Your initial prompt or base instruction file should ONLY contain the contents of `SYSTEM_CORE.md`. Add this strict instruction to the bottom:
 
