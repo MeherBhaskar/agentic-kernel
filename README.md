@@ -7,10 +7,7 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=for-the-badge)](http://makeapullrequest.com)
 [![Platform Agnostic](https://img.shields.io/badge/Platform-Agnostic-orange.svg?style=for-the-badge)](#platform-agnostic)
 [![GitHub last commit](https://img.shields.io/github/last-commit/MeherBhaskar/agent-rigor?style=for-the-badge)](https://github.com/MeherBhaskar/agent-rigor/commits/main)
-
-<br>
-
-**If you find Agent Rigor helpful for your workflows, we'd appreciate a star!**
+[![arXiv](https://img.shields.io/badge/arXiv-2506.22678-b31b1b.svg?style=for-the-badge)](https://arxiv.org/abs/2506.22678)
 
 <br>
 
@@ -40,7 +37,7 @@ AI coding agents often struggle not from a lack of intelligence, but from a lack
 
 **Agent Rigor** is a framework of modular Agent Skills designed to encourage mature, battle-tested software engineering practices. It provides structured instructions, verification steps, and safeguards that guide agents toward empirical discipline at every step.
 
-**Turn your unpredictable, hallucinating AI into a relentless, Senior-level 10x Engineer.**
+**Agents evaluated with agent-rigor scored 36% higher on process discipline and 30% higher on outcome correctness than baseline.**
 
 ---
 
@@ -72,7 +69,8 @@ Agent Rigor is pure markdown. It works natively with standard AI tools:
 | **Cursor** | Point to `.agents/SYSTEM_CORE.md` in your `.cursorrules` or `.mdc` files. |
 | **Claude Code** | Include a reference in your `CLAUDE.md`. |
 | **GitHub Copilot** | Reference in `.github/copilot-instructions.md`. |
-| **Gemini CLI / Antigravity**| Include in `.agents/AGENTS.md`. |
+| **Gemini CLI** | Include in `./AGENTS.md`. |
+| **Aider** | Pass via `--read .agents/SYSTEM_CORE.md`. |
 
 *Checkout the [`examples/`](./examples) folder for ready-to-use templates.*
 
@@ -135,6 +133,8 @@ Agent Rigor includes a library of 18 specialized Agent Skills. The **Apex Kernel
 
 ## Evaluation
 
+Evaluated in RigorBench (arXiv:2506.22678) across 100 tasks and 4 harnesses.
+
 | Task Category | Baseline ReAct | Superpowers | Agent-Skills | **Agent-Rigor** |
 | :--- | :---: | :---: | :---: | :---: |
 | **Plan-Then-Build** | 0.52 | 0.51 | 0.48 | **0.60** |
@@ -143,7 +143,7 @@ Agent Rigor includes a library of 18 specialized Agent Skills. The **Apex Kernel
 | **Doom Loop Gauntlet** | 0.45 | 0.45 | 0.45 | **0.55** |
 | **Don't Break the Build** | 0.45 | 0.44 | 0.44 | **0.64** |
 
-> **Key Finding:** A strong positive correlation ($r = 0.87$) was observed between process discipline and final outcome quality. Better processes generally lead to better code.
+> **Key Finding:** Agent-Rigor scored 0.53 vs 0.39 baseline on the RigorBench process quality composite — a 36% relative improvement.
 
 ---
 
