@@ -7,7 +7,7 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=for-the-badge)](http://makeapullrequest.com)
 [![Platform Agnostic](https://img.shields.io/badge/Platform-Agnostic-orange.svg?style=for-the-badge)](#platform-agnostic)
 [![GitHub last commit](https://img.shields.io/github/last-commit/MeherBhaskar/agent-rigor?style=for-the-badge)](https://github.com/MeherBhaskar/agent-rigor/commits/main)
-[![arXiv](https://img.shields.io/badge/arXiv-2506.22678-b31b1b.svg?style=for-the-badge)](https://arxiv.org/abs/2506.22678)
+[![arXiv](https://img.shields.io/badge/arXiv-2606.22678-b31b1b.svg?style=for-the-badge)](https://arxiv.org/abs/2606.22678)
 
 <br>
 
@@ -133,7 +133,7 @@ Agent Rigor includes a library of 18 specialized Agent Skills. The **Apex Kernel
 
 ## Evaluation
 
-Evaluated in RigorBench (arXiv:2506.22678) across 100 tasks and 4 harnesses.
+Evaluated in RigorBench (arXiv:2606.22678) across 100 tasks and 4 harnesses.
 
 | Task Category | Baseline ReAct | Superpowers | Agent-Skills | **Agent-Rigor** |
 | :--- | :---: | :---: | :---: | :---: |
